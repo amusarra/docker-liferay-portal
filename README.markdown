@@ -1,4 +1,4 @@
-# Liferay 7.1 Community Edition GA1 (Cluster Configuration) Docker Compose project
+# Liferay 7.1 Community Edition GA1 (Cluster Configuration) Docker Compose Project
 
 On October 23, 2017, [Liferay GA5 was released](https://community.liferay.com/news/liferay-portal-7-0-ce-ga5-release/). The great news was the return of the cluster.
 
