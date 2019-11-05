@@ -17,6 +17,7 @@ services:
       dockerfile: Dockerfile-liferay
     ports:
       - '6080:8080'
+      - '6001:8000'
       - '21311:11311'
     hostname: liferay-portal-node-1.local
     volumes:
@@ -31,6 +32,7 @@ services:
       dockerfile: Dockerfile-liferay
     ports:
       - '7080:8080'
+      - '7001:8000'
       - '31311:11311'
     hostname: liferay-portal-node-2.local
     volumes:
