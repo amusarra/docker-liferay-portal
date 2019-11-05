@@ -1,0 +1,1 @@
+Put here the files that you would deploy on Liferay Node 1
