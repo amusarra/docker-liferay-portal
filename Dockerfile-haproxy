@@ -1,4 +1,4 @@
-FROM haproxy:1.7
+FROM haproxy:2.0.7
 MAINTAINER Antonio Musarra <antonio.musarra@gmail.com>
 
 COPY ./haproxy/configs/haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
