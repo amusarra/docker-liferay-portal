@@ -22,6 +22,7 @@ services:
     hostname: liferay-portal-node-1.local
     volumes:
       - lfr-dl-volume:/data/liferay/document_library
+      - ./deploy/liferay-portal-node-1:/etc/liferay/mount/deploy
     depends_on:
       - postgres
       - es-node-1
@@ -37,6 +38,7 @@ services:
     hostname: liferay-portal-node-2.local
     volumes:
       - lfr-dl-volume:/data/liferay/document_library
+      - ./deploy/liferay-portal-node-2:/etc/liferay/mount/deploy
     depends_on:
       - postgres
       - es-node-1
