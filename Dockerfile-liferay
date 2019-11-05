@@ -1,11 +1,12 @@
 FROM liferay/portal:7.2.0-ga1
 MAINTAINER Antonio Musarra <antonio.musarra@gmail.com>
 
-COPY ./liferay/configs/portal-ext.properties $LIFERAY_CONFIG_DIR/
-COPY ./liferay/configs/*.config $LIFERAY_CONFIG_DIR/osgi/
-COPY ./liferay/configs/*.cfg $LIFERAY_CONFIG_DIR/osgi/
-COPY ./liferay/configs/setenv.sh $CATALINA_HOME/bin/setenv.sh
-COPY ./liferay/deploy/*.jar $LIFERAY_DEPLOY_DIR/
+COPY --chown=liferay:liferay liferay/configs/portal-ext.properties $LIFERAY_HOME/
+COPY --chown=liferay:liferay liferay/osgi/configs/* $LIFERAY_HOME/osgi/configs/
+
+USER root
 
 RUN mkdir -p /data/liferay/document_library \
   && chown -R liferay:liferay /data
+
+USER liferay
