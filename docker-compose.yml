@@ -39,7 +39,6 @@ services:
       - lfr-dl-volume:/data/liferay/document_library
     depends_on:
       - postgres
-      - liferay-portal-node-1
       - es-node-1
       - es-node-2
   postgres:
