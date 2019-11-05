@@ -1,4 +1,4 @@
-FROM mdelapenya/liferay-portal:7.1-ga1
+FROM liferay/portal:7.2.0-ga1
 MAINTAINER Antonio Musarra <antonio.musarra@gmail.com>
 
 COPY ./liferay/configs/portal-ext.properties $LIFERAY_CONFIG_DIR/
