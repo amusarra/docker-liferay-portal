@@ -1,7 +1,5 @@
 # Liferay 7.2 Community Edition GA1 (Cluster Configuration) Docker Compose Project
 
-------
-
 In June 2019 (about five months ago), [Liferay 7.2 GA1 was released](https://liferay.dev/news/liferay-portal-7-2-ce-ga1-release/). The great news was the return of the cluster OOTB, **without installing any other jar**.
 
 This repository contains a [Docker Compose](https://docs.docker.com/compose/overview/) project that allows you to get within a few minutes a Liferay cluster composed of two working nodes.
