@@ -44,6 +44,27 @@ deploy
 └── liferay-portal-node-2
 ```
 
+The fragment of the docker-compose.yml to highlight the bind type volumes dedicated to the deployment of bundles on Liferay nodes.
+
+```yaml
+  liferay-portal-node-1:
+    build:
+      context: .
+      dockerfile: Dockerfile-liferay
+    hostname: liferay-portal-node-1.local
+    volumes:
+      - lfr-dl-volume:/data/liferay/document_library
+      - ./deploy/liferay-portal-node-1:/etc/liferay/mount/deploy
+  liferay-portal-node-2:
+    build:
+      context: .
+      dockerfile: Dockerfile-liferay
+    hostname: liferay-portal-node-2.local
+    volumes:
+      - lfr-dl-volume:/data/liferay/document_library
+      - ./deploy/liferay-portal-node-2:/etc/liferay/mount/deploy
+```
+
 
 
 ## 1. Usage
