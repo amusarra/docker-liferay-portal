@@ -11,7 +11,7 @@ services:
     depends_on:
       - liferay-portal-node-1
       - liferay-portal-node-2
-    entrypoint: /wait-for-liferay.sh liferay-portal-node-2:8080 -- /docker-entrypoint.sh haproxy -d -f /usr/local/etc/haproxy/haproxy.cfg
+    entrypoint: /wait-for-liferay.sh -q liferay-portal-node-2:8080 -- /docker-entrypoint.sh haproxy -d -f /usr/local/etc/haproxy/haproxy.cfg
   liferay-portal-node-1:
     build:
       context: .
@@ -44,7 +44,7 @@ services:
       - postgres
       - es-node-1
       - es-node-2
-    entrypoint: /usr/local/bin/wait-for-liferay.sh liferay-portal-node-1:8080 -- /usr/local/bin/liferay_entrypoint.sh
+    entrypoint: /usr/local/bin/wait-for-liferay.sh -q liferay-portal-node-1:8080 -- /usr/local/bin/liferay_entrypoint.sh
   postgres:
     image: postgres
     environment:
