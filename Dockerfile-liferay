@@ -1,6 +1,9 @@
 FROM liferay/portal:7.2.0-ga1
 MAINTAINER Antonio Musarra <antonio.musarra@gmail.com>
 
+ADD --chown=liferay:liferay https://raw.githubusercontent.com/lgdd/wait-for-liferay/master/wait-for-liferay.sh /usr/local/bin/
+RUN chmod a+x /usr/local/bin/wait-for-liferay.sh
+
 COPY --chown=liferay:liferay liferay/configs/portal-ext.properties $LIFERAY_HOME/
 COPY --chown=liferay:liferay liferay/osgi/configs/* $LIFERAY_HOME/osgi/configs/
 

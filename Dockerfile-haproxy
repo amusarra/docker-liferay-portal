@@ -1,4 +1,8 @@
 FROM haproxy:2.0.7
 MAINTAINER Antonio Musarra <antonio.musarra@gmail.com>
 
+RUN apt-get update && apt-get install -y curl
+ADD https://raw.githubusercontent.com/lgdd/wait-for-liferay/master/wait-for-liferay.sh /
+RUN chmod a+x /wait-for-liferay.sh
+
 COPY ./haproxy/configs/haproxy.cfg /usr/local/etc/haproxy/haproxy.cfg
