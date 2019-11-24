@@ -1,4 +1,4 @@
-FROM liferay/portal:7.2.0-ga1
+FROM liferay/portal:7.2.1-ga2
 MAINTAINER Antonio Musarra <antonio.musarra@gmail.com>
 
 ADD --chown=liferay:liferay https://raw.githubusercontent.com/lgdd/wait-for-liferay/master/wait-for-liferay.sh /usr/local/bin/

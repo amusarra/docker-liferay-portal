@@ -1,18 +1,18 @@
-# Liferay 7.2 Community Edition GA1 (Cluster Configuration) Docker Compose Project
+# Liferay 7.2 Community Edition GA2 (Cluster Configuration) Docker Compose Project
 
 [![Antonio Musarra's Blog](https://img.shields.io/badge/maintainer-Antonio_Musarra's_Blog-purple.svg?colorB=6e60cc)](https://www.dontesta.it)
-[![Build Status](https://travis-ci.org/amusarra/docker-liferay-portal.svg?branch=7.2.0-ce-ga1-tomcat-postgres-cluster)](https://travis-ci.org/amusarra/docker-liferay-portal)
+[![Build Status](https://travis-ci.org/amusarra/docker-liferay-portal.svg?branch=7.2.1-ce-ga2-tomcat-postgres-cluster)](https://travis-ci.org/amusarra/docker-liferay-portal)
 [![Twitter Follow](https://img.shields.io/twitter/follow/antonio_musarra.svg?style=social&label=%40antonio_musarra%20on%20Twitter&style=plastic)](https://twitter.com/antonio_musarra)
 
-In June 2019 (about five months ago), [Liferay 7.2 GA1 was released](https://liferay.dev/news/liferay-portal-7-2-ce-ga1-release/). The great news was the return of the cluster OOTB, **without installing any other jar**.
+In November 2019, [Liferay 7.2 GA2 was released](https://liferay.dev/blogs/-/blogs/liferay-portal-7-2-ce-ga2-release).
 
 This repository contains a [Docker Compose](https://docs.docker.com/compose/overview/) project that allows you to get within a few minutes a Liferay cluster composed of two working nodes.
 
 This Docker Compose contains this services:
 
 1. **lb-haproxy**: HA Proxy (version 2.0.7) as Load Balancer
-2. **liferay-portal-node-1**: Liferay 7.2 GA1 (with cluster support) node 1
-3. **liferay-portal-node-2**: Liferay 7.2 GA1 (with cluster support) node 2
+2. **liferay-portal-node-1**: Liferay 7.2 GA2 (with cluster support) node 1
+3. **liferay-portal-node-2**: Liferay 7.2 GA2 (with cluster support) node 2
 4. **postgres**: PostgreSQL 10 database
 5. **es-node-1** and **es-node-2**: Elasticsearch 6.8.1 Cluster nodes
 
@@ -77,7 +77,7 @@ Install docker-compose and run docker with at least 8 GB of memory. The figure b
 
 
 
-To start a services from this Docker Compose, please run following `docker-compose` command, which will start a Liferay Portal 7.2 GA1 with cluster support running on Tomcat 9.0.17:
+To start a services from this Docker Compose, please run following `docker-compose` command, which will start a Liferay Portal 7.2 GA2 with cluster support running on Tomcat 9.0.17:
 
 For start Liferay Cluster proceed as follows:
 ```bash
@@ -235,7 +235,7 @@ In my case, I inserted the following entries on my /etc/hosts file:
 
 ```bash
 ##
-# Liferay 7.2 CE GA1 Cluster
+# Liferay 7.2 CE GA2 Cluster
 ##
 127.0.0.1	liferay-portal-node-1.local
 127.0.0.1	liferay-portal-node-2.local
