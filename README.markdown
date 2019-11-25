@@ -107,9 +107,9 @@ and you should get the following output. Be careful that the three bundle must b
 ```bash
 START LEVEL 20
    ID|State      |Level|Symbolic name
-  455|Active     |   10|com.liferay.portal.cache.multiple (3.0.5)|3.0.5
-  461|Active     |   10|com.liferay.portal.scheduler.multiple (3.0.2)|3.0.2
-  890|Active     |   10|com.liferay.portal.cluster.multiple (3.0.6)|3.0.6
+  453|Active     |   10|com.liferay.portal.cache.multiple (3.0.9)|3.0.9
+  459|Active     |   10|com.liferay.portal.scheduler.multiple (3.0.6)|3.0.6
+  882|Active     |   10|com.liferay.portal.cluster.multiple (3.0.15)|3.0.15
 ```
 
 On the logs of every Liferay instance you should see logs similar to those shown below.
@@ -226,6 +226,8 @@ After all the services are up, you can reach Liferay this way:
 ![liferay-portal-72-node-1](docs/images/liferay-portal-72-node-1.png)
 
 ![liferay-portal-72-node-2](docs/images/liferay-portal-72-node-2.png)
+
+![liferay-portal-72-via-ha-lb](docs/images/liferay-portal-72-ha-lb.png)
 
 You can access the HA Proxy statistics report in this way: http://localhost:8181 (username/password: liferay/liferay)
 
